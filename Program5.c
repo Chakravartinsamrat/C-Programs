@@ -1,11 +1,11 @@
 #include <stdio.h> 
 #include <stdlib.h> 
-
+//node structure
 struct Node { 
  	int data; 
  	struct Node* next; 
 }; 
-
+//stack structure
 struct Stack { 
  	struct Node* top; 
 };
@@ -18,7 +18,7 @@ void push(struct Stack* stack, int value) {
  	struct Node* newNode = (struct Node*)malloc(sizeof(struct Node)); 
  	if (newNode == NULL) { 
 	 	printf("Memory allocation failed.\n"); 
-	 	return; 
+	 	return; 			      
 	} 
 	newNode->data = value; 
 	newNode->next = stack->top; 
